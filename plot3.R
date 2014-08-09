@@ -34,3 +34,10 @@ dataSub$Sub_metering_2<-as.numeric(dataSub$Sub_metering_2)
 #quick peek at the data
 summary(dataSub)
 head(dataSub$Time)
+
+png("plot3.png", width=480, height=480)
+plot(dataSub$Date, dataSub$Sub_metering_1, ylab="Energy Sub Metering", xlab="", main="",type = "line")
+lines(dataSub$Date, dataSub$Sub_metering_2, col="red")
+lines(dataSub$Date, dataSub$Sub_metering_3, col="blue")
+legend("topright", legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lwd=2 ,col=c("black","red","blue"))
+dev.off()
