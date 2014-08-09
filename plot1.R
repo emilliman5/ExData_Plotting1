@@ -35,6 +35,8 @@ dataSub$Sub_metering_2<-as.numeric(dataSub$Sub_metering_2)
 summary(dataSub)
 head(dataSub$Time)
 
+#make desired plot
+
 png("plot1.png", width = 480, height = 480)
 hist(dataSub$Global_active_power, col="red", xlab="Global Active Power (kilowatts)", 
       main="Global Active Power")

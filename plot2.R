@@ -35,6 +35,7 @@ dataSub$Sub_metering_2<-as.numeric(dataSub$Sub_metering_2)
 summary(dataSub)
 head(dataSub$Time)
 
+#make desired plot
 png("plot2.png", width=480, height=480)
-plot(dataSub$Date, dataSub$Global_active_power, ylab="Global Activity Power (kilowatts)", xlab="", main="",type = "line")
+plot(dataSub$Date, dataSub$Global_active_power, ylab="Global Activity Power (kilowatts)", xlab="", main="",type = "l")
 dev.off()
